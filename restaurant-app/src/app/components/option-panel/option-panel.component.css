@@ -1,0 +1,23 @@
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 10px;
+}
+
+.mat-slider-horizontal {
+  width: 300px;
+}
+
+.margin-bottom {
+  margin-bottom: 5px;
+}
+
+.wrapper{
+  width: 35%;
+  float: right;
+}

@@ -1,0 +1,68 @@
+<div class="wrapper">
+  <mat-card>
+    <mat-card class="TimeAndColor margin-bottom">
+      <mat-card-title>Tijd- en kleurinstellingen</mat-card-title>
+      <mat-label class="example-margin">Huidige stapwaarde: {{ slidervalue }} min.</mat-label>
+      <br/>
+      <mat-slider
+        class="example-margin"
+        [step]=5
+        [min]=5
+        [max]=60
+        [thumbLabel]=true
+        [(ngModel)]="slidervalue"
+        onchange="sliderChanged()">
+      </mat-slider>
+      <br/>
+      <mat-label class="example-margin">Kleur na {{ border_one }} min.:</mat-label>
+      <mat-form-field>
+        <mat-select [(value)]="color_one" class="">
+          <mat-option value="white">Wit</mat-option>
+          <mat-option value="yellow">Geel</mat-option>
+          <mat-option value="red">Rood</mat-option>
+          <mat-option value="violet">Violet</mat-option>
+          <mat-option value="tan">Bruin</mat-option>
+          <mat-option value="green">Groen</mat-option>
+          <mat-option value="blue">Blauw</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br/>
+      <mat-label class="example-margin">Kleur na {{ border_two }} min.:</mat-label>
+      <mat-form-field>
+        <mat-select [(value)]="color_two" class="">
+          <mat-option value="white">Wit</mat-option>
+          <mat-option value="yellow">Geel</mat-option>
+          <mat-option value="red">Rood</mat-option>
+          <mat-option value="violet">Violet</mat-option>
+          <mat-option value="tan">Bruin</mat-option>
+          <mat-option value="green">Groen</mat-option>
+          <mat-option value="blue">Blauw</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br/>
+      <mat-label class="example-margin">Kleur na {{ border_three }} min.:</mat-label>
+      <mat-form-field>
+        <mat-select [(value)]="color_three" class="">
+          <mat-option value="white">Wit</mat-option>
+          <mat-option value="yellow">Geel</mat-option>
+          <mat-option value="red">Rood</mat-option>
+          <mat-option value="violet">Violet</mat-option>
+          <mat-option value="tan">Bruin</mat-option>
+          <mat-option value="green">Groen</mat-option>
+          <mat-option value="blue">Blauw</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br/>
+    </mat-card>
+    <mat-card class="DefaultView">
+      <mat-card-title>Weergave-instellingen</mat-card-title>
+      <mat-label class="example-margin">Weergave bestelling: </mat-label>
+      <mat-form-field>
+        <mat-select [(value)]="orderdisplay">
+          <mat-option value="personal">Per persoon</mat-option>
+          <mat-option value="byType">Per gerechttype</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card>
+  </mat-card>
+</div>

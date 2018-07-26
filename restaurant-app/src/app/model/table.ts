@@ -7,6 +7,8 @@ export class Table {
     public customers_total: number,
     public color: string,
     public posX: number,
-    public posY: number
+    public posY: number,
+    public width: number,
+    public length: number
   ) { }
 }

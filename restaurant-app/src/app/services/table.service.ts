@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import {Table} from '../model/table';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import 'rxjs/add/operator/map';
+import { HttpClient } from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class TableService {
-  configUrl = 'src/assets/backend/tables.json';
-  constructor(private http: HttpClient) {}
+  configUrl = 'api/tables';
+  constructor(private http: HttpClient) {
+    console.log('no error in service');
+  }
 
   getTables(): Observable<Table[]> {
     return this.http.get<Table[]>(this.configUrl);

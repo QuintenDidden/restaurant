@@ -2,7 +2,7 @@
   <mat-card>
     <mat-card class="TimeAndColor margin-bottom">
       <mat-card-title>Tijd- en kleurinstellingen</mat-card-title>
-      <mat-label class="example-margin">Huidige stapwaarde: {{ slidervalue }} min.</mat-label>
+      <mat-label class="example-margin">Huidige stapwaarde: {{ sliderValue }} min.</mat-label>
       <br/>
       <mat-slider
         class="example-margin"
@@ -10,8 +10,9 @@
         [min]=5
         [max]=60
         [thumbLabel]=true
-        [(ngModel)]="slidervalue"
-        onchange="sliderChanged()">
+        [(ngModel)]="sliderValue"
+        (change)="sliderChanged(sliderValue)"
+      >
       </mat-slider>
       <br/>
       <mat-label class="example-margin">Kleur na {{ border_one }} min.:</mat-label>

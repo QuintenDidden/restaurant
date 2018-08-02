@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {TableService} from '../../services/table.service';
 import {MatSnackBar} from '@angular/material';
+import {DishtypesService} from '../../services/dishtypes.service';
 
 @Component({
   selector: 'app-overview-panel',
@@ -9,15 +9,15 @@ import {MatSnackBar} from '@angular/material';
 })
 export class OverviewPanelComponent implements OnInit {
 
-  public tables = [];
+  public typeSet = [];
 
-  constructor(private tableService: TableService,
+  constructor(private dishtypeService: DishtypesService,
               private snackBar: MatSnackBar) {
   }
 
   ngOnInit(): void {
-    this.tableService.getTables().subscribe(data => {
-        this.tables = data;
+    this.dishtypeService.getDishTypes().subscribe(data => {
+        this.typeSet = data;
         console.log('success');
       },
       error => {
@@ -25,6 +25,5 @@ export class OverviewPanelComponent implements OnInit {
         console.log(error);
         this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
       });
-    console.log(this.tables[3]);
   }
 }

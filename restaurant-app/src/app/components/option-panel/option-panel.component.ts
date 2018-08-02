@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./option-panel.component.css']
 })
 export class OptionPanelComponent implements OnInit {
-  slidervalue = 10;
-  border_one = this.slidervalue;
-  border_two = this.slidervalue * 2;
-  border_three = this.slidervalue * 3;
+  sliderValue = 10;
+  border_one = this.sliderValue;
+  border_two = this.sliderValue * 2;
+  border_three = this.sliderValue * 3;
   color_one = 'white';
   color_two = 'yellow';
   color_three = 'red';
@@ -21,9 +21,12 @@ export class OptionPanelComponent implements OnInit {
   ngOnInit() {
   }
 
-  sliderChanged() {
-    this.border_one = this.slidervalue;
-    this.border_two = this.slidervalue * 2;
-    this.border_three = this.slidervalue * 3;
+  sliderChanged(sliderValue) {
+    console.log('slider changed');
+    this.border_one = sliderValue;
+    this.border_two = sliderValue * 2;
+    this.border_three = sliderValue * 3;
   }
+
+
 }

@@ -12,6 +12,8 @@ import {OptionPanelComponent} from './components/option-panel/option-panel.compo
 import {OverviewPanelComponent} from './components/overview-panel/overview-panel.component';
 import { AppRoutingModule } from './/app-routing.module';
 import {InMemoryTableService} from './services/in-memory-table.service';
+import { InMemoryDishTypesService } from './services/in-memory-dish-types.service';
+import { DishtypesService} from './services/dishtypes.service';
 
 @NgModule({
   declarations: [
@@ -27,11 +29,11 @@ import {InMemoryTableService} from './services/in-memory-table.service';
     FormsModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryTableService, { dataEncapsulation: false }
+      InMemoryDishTypesService, { dataEncapsulation: false }
     ),
     AppRoutingModule,
   ],
-  providers: [TableService],
+  providers: [TableService, DishtypesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

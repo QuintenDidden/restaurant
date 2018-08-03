@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import {Table} from '../model/table';
+import {Dish} from '../model/dish';
 import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs/Observable';
 import {HttpClient} from '@angular/common/http';
 
 @Injectable()
-export class TableService {
-  private tableUrl = 'api/tables';  // URL to web api
+export class DishesService {
+  private dishesUrl = 'api/dishes';  // URL to web api
 
   constructor(private http: HttpClient) { }
 
-  public getTables(): Observable<Table[]> {
-    return this.http.get<Table[]>(this.tableUrl);
+  public getDishes(): Observable<Dish[]> {
+    return this.http.get<Dish[]>(this.dishesUrl);
   }
 }

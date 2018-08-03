@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {MatSnackBar} from '@angular/material';
 import {DishtypesService} from '../../services/dishtypes.service';
+import {TableService} from '../../services/table.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-overview-panel',
@@ -9,21 +11,31 @@ import {DishtypesService} from '../../services/dishtypes.service';
 })
 export class OverviewPanelComponent implements OnInit {
 
-  public typeSet = [];
+  private tableSet = [];
 
   constructor(private dishtypeService: DishtypesService,
-              private snackBar: MatSnackBar) {
+              private tableService: TableService,
+              private snackBar: MatSnackBar,
+              private router: Router) {
   }
 
   ngOnInit(): void {
-    this.dishtypeService.getDishTypes().subscribe(data => {
-        this.typeSet = data;
-        console.log('success');
-      },
+    this.tableService.getTables().subscribe(data => {
+      this.tableSet = data;
+      console.log(this.tableSet.toString());
+    },
       error => {
-        console.log('error in reading');
-        console.log(error);
-        this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
+      console.log('error in reading');
+      console.log(error);
+      this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
       });
+  }
+
+  viewTable(id) {
+    //view table details
+    //routerlink?
+    console.log('card ' + id + ' clicked');
+    this.router.navigate(['/table/' + id]);
+
   }
 }

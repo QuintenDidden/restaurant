@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import {Table} from '../model/table';
+import {Order} from '../model/order';
 import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs/Observable';
 import {HttpClient} from '@angular/common/http';
 
 @Injectable()
-export class TableService {
-  private tableUrl = 'api/tables';  // URL to web api
+export class OrderService {
+  private orderUrl = 'api/orders';  // URL to web api
 
   constructor(private http: HttpClient) { }
 
-  public getTables(): Observable<Table[]> {
-    return this.http.get<Table[]>(this.tableUrl);
+  public getOrders(): Observable<Order[]> {
+    return this.http.get<Order[]>(this.orderUrl);
   }
 }

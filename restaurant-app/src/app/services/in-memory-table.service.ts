@@ -6,7 +6,7 @@ export class InMemoryTableService implements InMemoryDbService {
       {
         'id': 1,
         'minutes': 0,
-        'customers_total': 0,
+        'customers_total': 3,
         'color': 'white',
         'posX': 0,
         'posY': 0,
@@ -16,7 +16,7 @@ export class InMemoryTableService implements InMemoryDbService {
       {
         'id': 2,
         'minutes': 0,
-        'customers_total': 0,
+        'customers_total': 4,
         'color': 'white',
         'posX': 0,
         'posY': 0,
@@ -26,7 +26,7 @@ export class InMemoryTableService implements InMemoryDbService {
       {
         'id': 3,
         'minutes': 0,
-        'customers_total': 0,
+        'customers_total': 2,
         'color': 'white',
         'posX': 0,
         'posY': 0,
@@ -36,7 +36,7 @@ export class InMemoryTableService implements InMemoryDbService {
       {
         'id': 4,
         'minutes': 0,
-        'customers_total': 0,
+        'customers_total': 4,
         'color': 'white',
         'posX': 0,
         'posY': 0,
@@ -46,7 +46,7 @@ export class InMemoryTableService implements InMemoryDbService {
       {
         'id': 5,
         'minutes': 0,
-        'customers_total': 0,
+        'customers_total': 4,
         'color': 'white',
         'posX': 0,
         'posY': 0,
@@ -56,7 +56,7 @@ export class InMemoryTableService implements InMemoryDbService {
       {
         'id': 6,
         'minutes': 0,
-        'customers_total': 0,
+        'customers_total': 4,
         'color': 'white',
         'posX': 0,
         'posY': 0,
@@ -66,7 +66,7 @@ export class InMemoryTableService implements InMemoryDbService {
       {
         'id': 7,
         'minutes': 0,
-        'customers_total': 0,
+        'customers_total': 2,
         'color': 'white',
         'posX': 0,
         'posY': 0,
@@ -76,7 +76,7 @@ export class InMemoryTableService implements InMemoryDbService {
       {
         'id': 8,
         'minutes': 0,
-        'customers_total': 0,
+        'customers_total': 4,
         'color': 'white',
         'posX': 0,
         'posY': 0,
@@ -86,7 +86,7 @@ export class InMemoryTableService implements InMemoryDbService {
       {
         'id': 9,
         'minutes': 0,
-        'customers_total': 0,
+        'customers_total': 4,
         'color': 'white',
         'posX': 0,
         'posY': 0,
@@ -96,7 +96,7 @@ export class InMemoryTableService implements InMemoryDbService {
       {
         'id': 10,
         'minutes': 0,
-        'customers_total': 0,
+        'customers_total': 3,
         'color': 'white',
         'posX': 0,
         'posY': 0,
@@ -106,7 +106,7 @@ export class InMemoryTableService implements InMemoryDbService {
       {
         'id': 11,
         'minutes': 0,
-        'customers_total': 0,
+        'customers_total': 4,
         'color': 'white',
         'posX': 0,
         'posY': 0,
@@ -116,7 +116,7 @@ export class InMemoryTableService implements InMemoryDbService {
       {
         'id': 12,
         'minutes': 0,
-        'customers_total': 0,
+        'customers_total': 2,
         'color': 'white',
         'posX': 0,
         'posY': 0,
@@ -126,7 +126,7 @@ export class InMemoryTableService implements InMemoryDbService {
       {
         'id': 13,
         'minutes': 0,
-        'customers_total': 0,
+        'customers_total': 3,
         'color': 'white',
         'posX': 0,
         'posY': 0,
@@ -136,7 +136,7 @@ export class InMemoryTableService implements InMemoryDbService {
       {
         'id': 14,
         'minutes': 0,
-        'customers_total': 0,
+        'customers_total': 4,
         'color': 'white',
         'posX': 0,
         'posY': 0,
@@ -146,7 +146,7 @@ export class InMemoryTableService implements InMemoryDbService {
       {
         'id': 15,
         'minutes': 0,
-        'customers_total': 0,
+        'customers_total': 2,
         'color': 'white',
         'posX': 0,
         'posY': 0,

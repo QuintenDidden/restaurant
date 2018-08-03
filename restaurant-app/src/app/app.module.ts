@@ -10,17 +10,23 @@ import {TableService} from './services/table.service';
 import {NavigationComponent} from './components/navigation/navigation.component';
 import {OptionPanelComponent} from './components/option-panel/option-panel.component';
 import {OverviewPanelComponent} from './components/overview-panel/overview-panel.component';
-import { AppRoutingModule } from './/app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 import {InMemoryTableService} from './services/in-memory-table.service';
-import { InMemoryDishTypesService } from './services/in-memory-dish-types.service';
-import { DishtypesService} from './services/dishtypes.service';
+import {InMemoryDishTypesService} from './services/in-memory-dish-types.service';
+import {DishtypesService} from './services/dishtypes.service';
+import {OrderService} from './services/order.service';
+import {DishesService} from './services/dishes.service';
+import {InMemoryDishesService} from './services/in-memory-dishes.service';
+import {InMemoryOrdersService} from './services/in-memory-orders.service';
+import {TablePanelComponent} from './components/table-panel/table-panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     OptionPanelComponent,
-    OverviewPanelComponent
+    OverviewPanelComponent,
+    TablePanelComponent
   ],
   imports: [
     BrowserModule,
@@ -29,11 +35,20 @@ import { DishtypesService} from './services/dishtypes.service';
     FormsModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDishTypesService, { dataEncapsulation: false }
+      InMemoryDishTypesService, {dataEncapsulation: false}
     ),
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryTableService, {dataEncapsulation: false}
+    ),
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDishesService, {dataEncapsulation: false}
+    // ),
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryOrdersService, {dataEncapsulation: false}
+    // ),
     AppRoutingModule,
   ],
-  providers: [TableService, DishtypesService],
+  providers: [TableService, DishtypesService, OrderService, DishesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

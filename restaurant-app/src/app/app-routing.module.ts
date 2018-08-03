@@ -2,11 +2,13 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {OverviewPanelComponent} from './components/overview-panel/overview-panel.component';
 import {OptionPanelComponent} from './components/option-panel/option-panel.component';
+import {TablePanelComponent} from './components/table-panel/table-panel.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/overview', pathMatch: 'full'},
+  // {path: '', redirectTo: '/overview', pathMatch: 'full'},
   {path: 'overview', component: OverviewPanelComponent},
-  {path: 'options', component: OptionPanelComponent}
+  {path: 'options', component: OptionPanelComponent},
+  {path: 'table/:tableId', component: TablePanelComponent}
 ];
 
 @NgModule({

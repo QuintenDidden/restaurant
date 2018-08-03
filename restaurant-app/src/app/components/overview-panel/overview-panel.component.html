@@ -1,3 +1,16 @@
-<p>
-  overview-panel works!
-</p>
+<div class="wrapper">
+  <mat-card *ngFor="let table of tableSet" [style.background-color]="table.color" class="cardbox"
+  (click)="viewTable(table.id)">
+    <mat-card-title style="text-align: center">{{ table.id }}</mat-card-title>
+    <mat-card-content>
+      <div style="float: left">
+        <label style="font-size: 20px">{{ table.minutes }}</label>
+        <i class="material-icons md-18 vertical-align-middle padding-bottom-7">access_time</i>
+      </div>
+      <div style="float: right">
+        <label style="font-size: 20px">{{ table.customers_total }}</label>
+        <i class="material-icons md-18 vertical-align-middle padding-bottom-7">accessibility</i>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

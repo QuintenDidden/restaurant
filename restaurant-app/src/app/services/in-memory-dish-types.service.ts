@@ -5,27 +5,15 @@ export class InMemoryDishTypesService implements InMemoryDbService {
     const dishtypes = [
       {
         'id': 1,
-        'name': 'Frodo',
+        'name': 'Voorgerecht'
       },
       {
         'id': 2,
-        'name': 'Gandalf',
+        'name': 'Hoofdgerecht'
       },
       {
         'id': 3,
-        'name': 'Ork',
-      },
-      {
-        'id': 4,
-        'name': 'Aragorn',
-      },
-      {
-        'id': 5,
-        'name': 'Dwarf',
-      },
-      {
-        'id': 6,
-        'name': 'Smeagol',
+        'name': 'Dessert'
       }
     ];
     return {dishtypes};

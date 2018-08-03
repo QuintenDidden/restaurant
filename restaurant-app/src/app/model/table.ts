@@ -1,5 +1,3 @@
-import {Order} from './order';
-
 export class Table {
   constructor(
     public id: number,

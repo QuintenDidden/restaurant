@@ -1,3 +1,8 @@
 <p>
   Overview for {{ tableId.toString() }}
 </p>
+<ul>
+  <li *ngFor="let order of tableOrders">
+    {{ order.dish }} {{ order.first_name }} {{ order.last_name }} {{ order.table }}
+  </li>
+</ul>

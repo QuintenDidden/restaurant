@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {MatSnackBar} from '@angular/material';
-import {DishtypesService} from '../../services/dishtypes.service';
 import {TableService} from '../../services/table.service';
 import {Router} from '@angular/router';
 
@@ -13,7 +12,7 @@ export class OverviewPanelComponent implements OnInit {
 
   private tableSet = [];
 
-  constructor(private dishtypeService: DishtypesService,
+  constructor(
               private tableService: TableService,
               private snackBar: MatSnackBar,
               private router: Router) {
@@ -32,10 +31,8 @@ export class OverviewPanelComponent implements OnInit {
   }
 
   viewTable(id) {
-    //view table details
-    //routerlink?
     console.log('card ' + id + ' clicked');
-    this.router.navigate(['/table/' + id]);
+    this.router.navigate(['/table/', id]);
 
   }
 }

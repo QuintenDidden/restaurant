@@ -13,4 +13,8 @@ export class TableService {
   public getTables(): Observable<Table[]> {
     return this.http.get<Table[]>(this.tableUrl);
   }
+
+  public getTable(id): Observable<Table> {
+    return this.http.get<Table>(this.tableUrl + '/' + id);
+  }
 }

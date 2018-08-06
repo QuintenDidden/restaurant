@@ -16,6 +16,7 @@ import {DishtypesService} from './services/dishtypes.service';
 import {OrderService} from './services/order.service';
 import {DishesService} from './services/dishes.service';
 import {TablePanelComponent} from './components/table-panel/table-panel.component';
+import {OptionsService} from './services/options.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import {TablePanelComponent} from './components/table-panel/table-panel.componen
     ),
     AppRoutingModule,
   ],
-  providers: [TableService, DishtypesService, OrderService, DishesService],
+  providers: [TableService, DishtypesService, OrderService, DishesService, OptionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

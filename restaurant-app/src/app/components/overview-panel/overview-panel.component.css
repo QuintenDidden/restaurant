@@ -1,17 +1,43 @@
-.wrapper{
+.wrapper {
   margin: auto;
   width: 80%;
 }
 
 .cardbox {
-  width: 25%;
+  width: 180px;
   float: left;
   margin: 5px 40px 25px 5px;
 }
+
 .vertical-align-middle {
   vertical-align: middle;
 }
 
 .padding-bottom-7 {
   padding-bottom: 7px;
+}
+
+.redOutline{
+  border: solid red 2px;
+}
+
+.cardButton {
+  text-align: center;
+  font-size: small;
+}
+
+.posAbsLeft{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.posAbsCenter{
+  position: absolute;
+  bottom: 0;
+  left: 70px;
+}
+.posAbsRight{
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

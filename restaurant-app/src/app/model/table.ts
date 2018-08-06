@@ -4,8 +4,8 @@ export class Table {
     public minutes: number,
     public customers_total: number,
     public color: string,
-    public posX: number,
-    public posY: number,
+    public posX: string,
+    public posY: string,
     public width: number,
     public length: number
   ) { }

@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {OptionsService} from '../../services/options.service';
 
 @Component({
   selector: 'app-navigation',
@@ -7,11 +8,13 @@ import {Router} from '@angular/router';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
+  time;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private options: OptionsService) {
   }
 
   ngOnInit() {
+    this.options.currentTimer.subscribe(data => this.time = data);
   }
 
   navigateOptions() {
@@ -21,4 +24,9 @@ export class NavigationComponent implements OnInit {
   navigateOverview() {
     this.router.navigate(['/overview']);
   }
+
+  stopTimer() {
+    this.options.changeTimerStarted(false);
+  }
+
 }

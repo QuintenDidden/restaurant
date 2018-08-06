@@ -2,6 +2,8 @@
   <mat-toolbar-row>
     <span>Holy Crêpe Restaurant</span>
     <span class="example-spacer"></span>
+    <span>{{ time }} min.</span>
+    <button mat-button (click)="stopTimer()">Stop Timer</button>
     <button mat-button (click)="navigateOverview()">Overview</button>
     <button mat-button (click)="navigateOptions()">Options</button>
   </mat-toolbar-row>

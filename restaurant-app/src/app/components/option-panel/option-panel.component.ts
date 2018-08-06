@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {OptionsService} from '../../services/options.service';
 
 @Component({
   selector: 'app-option-panel',
@@ -16,7 +17,8 @@ export class OptionPanelComponent implements OnInit {
 
   orderdisplay = 'personal';
 
-  constructor() { }
+  constructor(private options: OptionsService) {
+  }
 
   ngOnInit() {
   }
@@ -26,7 +28,34 @@ export class OptionPanelComponent implements OnInit {
     this.border_one = sliderValue;
     this.border_two = sliderValue * 2;
     this.border_three = sliderValue * 3;
+    // broadcast changes
+    this.options.changeBorderOne(this.border_one);
+    this.options.changeBorderTwo(this.border_two);
+    this.options.changeBorderThree(this.border_three);
   }
 
 
+  orderChanged(orderdisplay: string) {
+    this.orderdisplay = orderdisplay;
+    // broadcast change
+    this.options.changeOrderDisplay(this.orderdisplay);
+  }
+
+  colorOneChanged(color_one: string) {
+    this.color_one = color_one;
+    // broadcast change
+    this.options.changeColorOne(this.color_one);
+  }
+
+  colorTwoChanged(color_two: string) {
+    this.color_two = color_two;
+    // broadcast change
+    this.options.changeColorTwo(this.color_two);
+  }
+
+  colorThreeChanged(color_three: string) {
+    this.color_three = color_three;
+    // broadcast change
+    this.options.changeColorThree(this.color_three);
+  }
 }

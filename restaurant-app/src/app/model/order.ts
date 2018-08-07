@@ -5,6 +5,8 @@ export class Order {
   public last_name: string,
   public customer_id: number,
   public table: number,
-  public dish: number
+  public type: string,
+  public dishname: string,
+  public dish_desc: string
   ) { }
 }

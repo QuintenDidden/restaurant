@@ -1,10 +1,10 @@
-<p>
-  Overview for {{ tableId.toString() }}
-</p>
-<ul>
-  <li *ngFor="let order of tableOrders">
-    {{ order.dish }} {{ order.first_name }} {{ order.last_name }} {{ order.table }}
-  </li>
-</ul>
-<app-personal-overview [orders]="tableOrders"></app-personal-overview>
-<app-order-overview [orders]="tableOrders"></app-order-overview>
+<!--<p>-->
+  <!--Overview for {{ tableId.toString() }}-->
+<!--</p>-->
+<!--<ul>-->
+  <!--<li *ngFor="let order of tableOrders">-->
+    <!--{{ order.dishname }}, {{ order.last_name }}-->
+  <!--</li>-->
+<!--</ul>-->
+<app-personal-overview [orders]="tableOrders" [tableId]="tableId"></app-personal-overview>
+<app-order-overview [tableId]="tableId"></app-order-overview>

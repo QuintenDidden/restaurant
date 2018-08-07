@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PersonalOverviewComponent implements OnInit {
   @Input() orders;
+  @Input() tableId;
 
   constructor() { }
 

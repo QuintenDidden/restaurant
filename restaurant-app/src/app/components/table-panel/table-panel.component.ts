@@ -35,7 +35,7 @@ export class TablePanelComponent implements OnInit {
 
     this.orderService.getOrders().subscribe(data => {
       this.orders = data;
-      this.filterOrders();
+      this.tableFilter();
     }, error => {
       console.log('error in reading orders');
       console.log(error);
@@ -43,7 +43,7 @@ export class TablePanelComponent implements OnInit {
     });
   }
 
-  filterOrders() {
+  tableFilter() {
     this.tableOrders = this.orders.filter(order => order.table === this.tableId);
   }
 }

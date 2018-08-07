@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card>
+    <mat-card-title>Starters</mat-card-title>
+    <mat-card-content>
+      <p *ngFor="let starter of starters">
+        {{ starter.name }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>Mains</mat-card-title>
+    <mat-card-content>
+      <p *ngFor="let main of mains">
+        {{ main.name }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>Desserts</mat-card-title>
+    <mat-card-content>
+      <p *ngFor="let dessert of desserts">
+        {{ dessert.name }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</mat-card>

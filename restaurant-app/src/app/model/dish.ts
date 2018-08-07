@@ -1,6 +1,6 @@
 export class Dish {
   id: number;
-  type: number;
+  type: string;
   name: string;
   description: string;
 }

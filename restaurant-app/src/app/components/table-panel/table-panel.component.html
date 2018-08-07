@@ -6,3 +6,5 @@
     {{ order.dish }} {{ order.first_name }} {{ order.last_name }} {{ order.table }}
   </li>
 </ul>
+<app-personal-overview [orders]="tableOrders"></app-personal-overview>
+<app-order-overview [orders]="tableOrders"></app-order-overview>

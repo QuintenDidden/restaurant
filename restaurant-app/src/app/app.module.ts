@@ -12,11 +12,12 @@ import {OptionPanelComponent} from './components/option-panel/option-panel.compo
 import {OverviewPanelComponent} from './components/overview-panel/overview-panel.component';
 import {AppRoutingModule} from './app-routing.module';
 import {InMemoryRestaurantService} from './services/in-memory-restaurant.service';
-import {DishtypesService} from './services/dishtypes.service';
 import {OrderService} from './services/order.service';
 import {DishesService} from './services/dishes.service';
 import {TablePanelComponent} from './components/table-panel/table-panel.component';
 import {OptionsService} from './services/options.service';
+import {PersonalOverviewComponent} from './components/personal-overview/personal-overview.component';
+import {OrderOverviewComponent} from './components/order-overview/order-overview.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import {OptionsService} from './services/options.service';
     NavigationComponent,
     OptionPanelComponent,
     OverviewPanelComponent,
-    TablePanelComponent
+    TablePanelComponent,
+    PersonalOverviewComponent,
+    OrderOverviewComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,7 @@ import {OptionsService} from './services/options.service';
     ),
     AppRoutingModule,
   ],
-  providers: [TableService, DishtypesService, OrderService, DishesService, OptionsService],
+  providers: [TableService, OrderService, DishesService, OptionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

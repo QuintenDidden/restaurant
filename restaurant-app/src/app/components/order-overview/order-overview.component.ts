@@ -10,8 +10,6 @@ import {OrderService} from '../../services/order.service';
 })
 export class OrderOverviewComponent implements OnInit {
   @Input() tableId;
-  orders = [];
-  tableOrders = [];
   tableStarters = [];
   tableMains = [];
   tableDesserts = [];
@@ -30,24 +28,4 @@ export class OrderOverviewComponent implements OnInit {
       this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
     });
   }
-
-  // tableFilter() {
-  //   this.tableOrders = this.orders.filter(order => order.table === this.tableId);
-  // }
-  //
-  // starterFilter() {
-  //   this.tableFilter();
-  //   this.tableStarters = this.tableOrders.filter(order => order.type === 'Starter');
-  // }
-  //
-  // mainFilter() {
-  //   this.tableFilter();
-  //   this.tableMains = this.tableOrders.filter(order => order.type === 'Main');
-  // }
-  //
-  // dessertFilter() {
-  //   this.tableFilter();
-  //   this.tableDesserts = this.tableOrders.filter(order => order.type === 'Dessert');
-  // }
-
 }

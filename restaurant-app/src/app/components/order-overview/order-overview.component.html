@@ -14,7 +14,7 @@
     <mat-card-content>
       <p *ngFor="let starter of tableStarters">
         {{ starter.dishname }}
-        <label style="margin-left: 25px; font-size: small"><br/> {{ starter.dish_desc }}</label>
+        <sub><br/> - {{ starter.dish_desc }}</sub>
       </p>
     </mat-card-content>
   </mat-card>
@@ -23,7 +23,7 @@
     <mat-card-content>
       <p *ngFor="let main of tableMains">
         {{ main.dishname }}
-        <label style="margin-left: 25px; font-size: small"><br/> {{ main.dish_desc }}</label>
+        <sub><br/> - {{ main.dish_desc }}</sub>
       </p>
     </mat-card-content>
   </mat-card>
@@ -32,7 +32,7 @@
     <mat-card-content>
       <p *ngFor="let dessert of tableDesserts">
         {{ dessert.dishname }}
-        <label style="margin-left: 25px; font-size: small"><br/> {{ dessert.dish_desc }}</label>
+        <sub><br/> - {{ dessert.dish_desc }}</sub>
       </p>
     </mat-card-content>
   </mat-card>

@@ -1,10 +1,20 @@
-<!--<p>-->
-  <!--Overview for {{ tableId.toString() }}-->
-<!--</p>-->
-<!--<ul>-->
-  <!--<li *ngFor="let order of tableOrders">-->
-    <!--{{ order.dishname }}, {{ order.last_name }}-->
-  <!--</li>-->
-<!--</ul>-->
-<app-personal-overview [tableId]="tableId"></app-personal-overview>
-<!--<app-order-overview [tableId]="tableId"></app-order-overview>-->
+<!--Tabs for the two different order view methods-->
+<mat-card>
+  <mat-card-content>
+    <h2 class="example-h2">Tabs with text labels</h2>
+    <mat-tab-group class="demo-tab-group">
+      <mat-tab label="Order Overview">
+        <div class="demo-tab-content">
+          <!--Order overview of the orders, ordered by dishtype-->
+          <app-order-overview [tableId]="tableId"></app-order-overview>
+        </div>
+      </mat-tab>
+      <mat-tab label="Personal Overview">
+        <div class="demo-tab-content">
+          <!--Personal overview of the orders, ordered by name-->
+          <app-personal-overview [tableId]="tableId"></app-personal-overview>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>

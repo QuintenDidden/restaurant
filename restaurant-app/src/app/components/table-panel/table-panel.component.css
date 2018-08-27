@@ -1,7 +1,13 @@
 .demo-tab-group {
   border: 1px solid #e8e8e8;
+  width: 80%;
+  margin: auto;
 }
 
 .demo-tab-content {
   padding: 16px;
+}
+
+.mat-tab {
+  font-size: 100px;
 }

@@ -1,29 +1,41 @@
-  <mat-card>
-    <h1>{{ uniqueCustomers[0].last_name }}</h1>
-
-    <div *ngFor="let order of customer1">
+<mat-card class="subCard">
+  <mat-card-title>{{ uniqueCustomers[0].last_name }}, {{ uniqueCustomers[0].first_name }}</mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let order of customer1">
       {{ order.dishname }}
-    </div>
-  </mat-card>
-  <mat-card>
-    <h1>{{ uniqueCustomers[1].last_name }}</h1>
-
-    <div *ngFor="let order of customer2">
+      <br/>
+      <sub>- {{ order.dish_desc}}</sub>
+    </p>
+  </mat-card-content>
+</mat-card>
+<mat-card class="subCard">
+  <mat-card-title>{{ uniqueCustomers[1].last_name }}, {{ uniqueCustomers[1].first_name }}</mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let order of customer2">
       {{ order.dishname }}
-    </div>
-  </mat-card>
-  <mat-card>
-    <h1>{{ uniqueCustomers[2].last_name }}</h1>
-
-    <div *ngFor="let order of customer3">
+      <br/>
+      <sub>- {{ order.dish_desc}}</sub>
+    </p>
+  </mat-card-content>
+</mat-card>
+<mat-card class="subCard">
+  <mat-card-title>{{ uniqueCustomers[2].last_name }}, {{ uniqueCustomers[2].first_name }}</mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let order of customer3">
       {{ order.dishname }}
-    </div>
-  </mat-card>
-  <mat-card>
-    <h1>{{ uniqueCustomers[3].last_name }}</h1>
-
-    <div *ngFor="let order of customer4">
+      <br/>
+      <sub>- {{ order.dish_desc}}</sub>
+    </p>
+  </mat-card-content>
+</mat-card>
+<mat-card class="subCard">
+  <mat-card-title>{{ uniqueCustomers[3].last_name }}, {{ uniqueCustomers[3].first_name }}</mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let order of customer4">
       {{ order.dishname }}
-    </div>
-  </mat-card>
+      <br/>
+      <sub>- {{ order.dish_desc}}</sub>
+    </p>
+  </mat-card-content>
+</mat-card>
 

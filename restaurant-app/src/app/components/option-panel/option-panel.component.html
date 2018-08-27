@@ -18,41 +18,41 @@
       <mat-label class="example-margin">Kleur na {{ border_one }} min.:</mat-label>
       <mat-form-field class="dropbox">
         <mat-select [(value)]="color_one" class="dropbox" (change)="colorOneChanged(color_one)">
-          <mat-option value="white">Wit</mat-option>
           <mat-option value="yellow">Geel</mat-option>
           <mat-option value="red">Rood</mat-option>
           <mat-option value="violet">Violet</mat-option>
           <mat-option value="tan">Bruin</mat-option>
           <mat-option value="green">Groen</mat-option>
           <mat-option value="blue">Blauw</mat-option>
+          <mat-option value="white">Wit</mat-option>
         </mat-select>
       </mat-form-field>
       <br/>
       <mat-label class="example-margin">Kleur na {{ border_two }} min.:</mat-label>
       <mat-form-field class="dropbox">
         <mat-select [(value)]="color_two" class="dropbox" (change)="colorTwoChanged(color_two)">
-          <mat-option value="white">Wit</mat-option>
           <mat-option value="yellow">Geel</mat-option>
           <mat-option value="red">Rood</mat-option>
           <mat-option value="violet">Violet</mat-option>
           <mat-option value="tan">Bruin</mat-option>
           <mat-option value="green">Groen</mat-option>
           <mat-option value="blue">Blauw</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <br/>
-      <mat-label class="example-margin">Kleur na {{ border_three }} min.:</mat-label>
-      <mat-form-field class="dropbox">
-        <mat-select [(value)]="color_three" class="dropbox" (change)="colorThreeChanged(color_three)">
           <mat-option value="white">Wit</mat-option>
-          <mat-option value="yellow">Geel</mat-option>
-          <mat-option value="red">Rood</mat-option>
-          <mat-option value="violet">Violet</mat-option>
-          <mat-option value="tan">Bruin</mat-option>
-          <mat-option value="green">Groen</mat-option>
-          <mat-option value="blue">Blauw</mat-option>
         </mat-select>
       </mat-form-field>
+      <!--<br/>-->
+      <!--<mat-label class="example-margin">Kleur na {{ border_three }} min.:</mat-label>-->
+      <!--<mat-form-field class="dropbox">-->
+        <!--<mat-select [(value)]="color_three" class="dropbox" (change)="colorThreeChanged(color_three)">-->
+          <!--<mat-option value="white">Wit</mat-option>-->
+          <!--<mat-option value="yellow">Geel</mat-option>-->
+          <!--<mat-option value="red">Rood</mat-option>-->
+          <!--<mat-option value="violet">Violet</mat-option>-->
+          <!--<mat-option value="tan">Bruin</mat-option>-->
+          <!--<mat-option value="green">Groen</mat-option>-->
+          <!--<mat-option value="blue">Blauw</mat-option>-->
+        <!--</mat-select>-->
+      <!--</mat-form-field>-->
       <br/>
     </mat-card>
     <mat-card class="DefaultView">

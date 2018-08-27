@@ -11,7 +11,7 @@ import {OptionsService} from '../../services/options.service';
 })
 export class OverviewPanelComponent implements OnInit {
 
-  private tableSet = [];
+  tableSet = [];
   private width;
   private height;
   private timerStart: boolean;

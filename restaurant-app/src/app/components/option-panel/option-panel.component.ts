@@ -11,9 +11,9 @@ export class OptionPanelComponent implements OnInit {
   border_one = this.sliderValue;
   border_two = this.sliderValue * 2;
   border_three = this.sliderValue * 3;
-  color_one = 'white';
-  color_two = 'yellow';
-  color_three = 'red';
+  color_one = 'yellow';
+  color_two = 'red';
+  // color_three = 'red';
 
   orderdisplay = 'personal';
 
@@ -27,11 +27,11 @@ export class OptionPanelComponent implements OnInit {
     console.log('slider changed');
     this.border_one = sliderValue;
     this.border_two = sliderValue * 2;
-    this.border_three = sliderValue * 3;
+    // this.border_three = sliderValue * 3;
     // broadcast changes
     this.options.changeBorderOne(this.border_one);
     this.options.changeBorderTwo(this.border_two);
-    this.options.changeBorderThree(this.border_three);
+    // this.options.changeBorderThree(this.border_three);
   }
 
 
@@ -53,9 +53,9 @@ export class OptionPanelComponent implements OnInit {
     this.options.changeColorTwo(this.color_two);
   }
 
-  colorThreeChanged(color_three: string) {
-    this.color_three = color_three;
-    // broadcast change
-    this.options.changeColorThree(this.color_three);
-  }
+  // colorThreeChanged(color_three: string) {
+  //   this.color_three = color_three;
+  //   // broadcast change
+  //   this.options.changeColorThree(this.color_three);
+  // }
 }

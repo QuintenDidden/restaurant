@@ -1,3 +1,30 @@
-<p *ngFor="let cust of customers">
-  {{ cust.last_name }}
-</p>
+<mat-card>
+  <mat-card>
+    <h1>{{ uniqueCustomers[0].last_name }}</h1>
+
+    <div *ngFor="let order of customer1">
+      {{ order.dishname }}
+    </div>
+  </mat-card>
+  <mat-card>
+    <h1>{{ uniqueCustomers[1].last_name }}</h1>
+
+    <div *ngFor="let order of customer2">
+      {{ order.dishname }}
+    </div>
+  </mat-card>
+  <mat-card>
+    <h1>{{ uniqueCustomers[2].last_name }}</h1>
+
+    <div *ngFor="let order of customer3">
+      {{ order.dishname }}
+    </div>
+  </mat-card>
+  <mat-card>
+    <h1>{{ uniqueCustomers[3].last_name }}</h1>
+
+    <div *ngFor="let order of customer4">
+      {{ order.dishname }}
+    </div>
+  </mat-card>
+</mat-card>

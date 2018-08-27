@@ -1,7 +1,9 @@
+<!--Container for the tables-->
 <div class="wrapper">
+  <!--Loop through and display all tables-->
   <mat-card *ngFor="let table of tableSet" [style.background-color]="table.color" class="cardbox"
             (click)="viewTable(table.id)" style="position: absolute" [style.top]="table.posY" [style.left]="table.posX">
-    <mat-card-title style="text-align: center" class="">{{ table.id }}</mat-card-title>
+    <mat-card-title style="text-align: center;" class="">{{ table.id }}</mat-card-title>
     <mat-card-content class="">
       <div style="float: left">
         <label style="font-size: 20px">{{ table.minutes }}</label>

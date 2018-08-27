@@ -6,21 +6,21 @@ export class OptionsService {
 
   private borderOne = new BehaviorSubject(10);
   private borderTwo = new BehaviorSubject(20);
-  private borderThree = new BehaviorSubject(30);
+  // private borderThree = new BehaviorSubject(30);
   private orderDisplay = new BehaviorSubject('personal');
-  private colorOne = new BehaviorSubject('white');
-  private colorTwo = new BehaviorSubject('yellow');
-  private colorThree = new BehaviorSubject('red');
+  private colorOne = new BehaviorSubject('yellow');
+  private colorTwo = new BehaviorSubject('red');
+  // private colorThree = new BehaviorSubject('red');
   private timer = new BehaviorSubject(0);
   private timerStarted = new BehaviorSubject(true);
 
   currentBorderOne = this.borderOne.asObservable();
   currentBorderTwo = this.borderTwo.asObservable();
-  currentBorderThree = this.borderThree.asObservable();
+  // currentBorderThree = this.borderThree.asObservable();
   currentOrderDisplay = this.orderDisplay.asObservable();
   currentColorOne = this.colorOne.asObservable();
   currentColorTwo = this.colorTwo.asObservable();
-  currentColorThree = this.colorThree.asObservable();
+  // currentColorThree = this.colorThree.asObservable();
   currentTimer = this.timer.asObservable();
   currentTimerState = this.timerStarted.asObservable();
   private timerStart: boolean;
@@ -37,9 +37,9 @@ export class OptionsService {
     this.borderTwo.next(border);
   }
 
-  changeBorderThree(border: number) {
-    this.borderThree.next(border);
-  }
+  // changeBorderThree(border: number) {
+  //   this.borderThree.next(border);
+  // }
 
   changeOrderDisplay(order: string) {
     this.orderDisplay.next(order);
@@ -48,18 +48,20 @@ export class OptionsService {
   changeColorOne(color: string) {
     this.colorOne.next(color);
   }
+
   changeColorTwo(color: string) {
     this.colorTwo.next(color);
   }
-  changeColorThree(color: string) {
-    this.colorThree.next(color);
-  }
+
+  // changeColorThree(color: string) {
+  //   this.colorThree.next(color);
+  // }
 
   changeTimer(time: number) {
     this.timer.next(time);
   }
 
-  changeTimerStarted(state: boolean){
+  changeTimerStarted(state: boolean) {
     this.timerStarted.next(state);
   }
 
@@ -76,6 +78,6 @@ export class OptionsService {
   }
 
   delay(ms: number) {
-    return new Promise( resolve => setTimeout(resolve, ms) );
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 }

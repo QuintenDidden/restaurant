@@ -1,10 +1,14 @@
+<!--Toolbar from Material Design-->
 <mat-toolbar color="primary" class="margin-bottom fontSerif">
   <mat-toolbar-row>
     <span>Holy Crêpe Restaurant</span>
     <span class="example-spacer"></span>
     <span>{{ time }} min.</span>
+    <!--Stop the overall timer-->
     <button mat-button (click)="stopTimer()">Stop Timer</button>
+    <!--Navigate to table overview-->
     <button mat-button (click)="navigateOverview()">Overview</button>
+    <!--Navigate to options-->
     <button mat-button (click)="navigateOptions()">Options</button>
   </mat-toolbar-row>
 </mat-toolbar>

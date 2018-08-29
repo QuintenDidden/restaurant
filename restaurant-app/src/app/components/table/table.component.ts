@@ -136,23 +136,29 @@ export class TableComponent implements OnInit {
     this.table.minutes = 0;
   }
 
+  // Start the local tableTimer
   async startTimer() {
     await this.delay((Math.floor(Math.random() * 10) + 1) * 2000);
     while (this.tableIsInService) {
       await this.delay(2000);
       this.table.minutes += 1;
+      // Change color of table according to borders
+      // Check if table is in 'warning' zone
       if (this.table.minutes > this.borderWarning && this.table.minutes < this.borderDanger) {
         document.getElementById('table' + this.tableId).style.backgroundColor = this.warningColor;
       }
+      // Check if table is in 'danger' zone
       if (this.table.minutes > this.borderDanger) {
         document.getElementById('table' + this.tableId).style.backgroundColor = this.dangerColor;
       }
+      // Table has customers but is not yet in a 'danger' or 'warning' zone
       if (this.table.minutes < this.borderWarning) {
         document.getElementById('table' + this.tableId).style.backgroundColor = '#ccffcc';
       }
     }
   }
 
+  // Timer
   delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }

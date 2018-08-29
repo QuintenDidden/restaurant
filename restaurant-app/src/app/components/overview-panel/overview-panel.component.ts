@@ -21,6 +21,7 @@ export class OverviewPanelComponent implements OnInit {
               private options: OptionsService) {
   }
 
+  // Get tables from tableService
   ngOnInit(): void {
     this.tableService.getTables().subscribe(data => {
         this.tableSet = data;
@@ -29,9 +30,7 @@ export class OverviewPanelComponent implements OnInit {
       error => {
         this.onError(error);
       });
-    this.width = window.innerWidth;
-    this.height = window.innerHeight;
-    console.log(this.width + ' x ' + this.height);
+    // After tables have been loaded, start the optionsTimer
     this.options.startTimer();
   }
 

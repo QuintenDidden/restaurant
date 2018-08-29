@@ -4,6 +4,7 @@
       <mat-card-title>Tijd- en kleurinstellingen</mat-card-title>
       <mat-label class="example-margin">Huidige stapwaarde: {{ sliderValue }} min.</mat-label>
       <br/>
+      <!--Slider for time values-->
       <mat-slider
         class="example-margin"
         [step]=5
@@ -15,6 +16,7 @@
       >
       </mat-slider>
       <br/>
+      <!--Dropbox for color after first time border has been reached-->
       <mat-label class="example-margin">Kleur na {{ border_one }} min.:</mat-label>
       <mat-form-field class="dropbox">
         <mat-select [(value)]="color_one" class="dropbox" (change)="colorOneChanged(color_one)">
@@ -30,6 +32,7 @@
         </mat-select>
       </mat-form-field>
       <br/>
+      <!--Dropbox for color after second time border has been reached-->
       <mat-label class="example-margin">Kleur na {{ border_two }} min.:</mat-label>
       <mat-form-field class="dropbox">
         <mat-select [(value)]="color_two" class="dropbox" (change)="colorTwoChanged(color_two)">
@@ -50,6 +53,7 @@
       <mat-card-title>Weergave-instellingen</mat-card-title>
       <mat-label class="example-margin">Weergave bestelling: </mat-label>
       <mat-form-field>
+        <!--Dropbox for two different order views-->
         <mat-select [(value)]="orderdisplay" (change)="orderChanged(orderdisplay)">
           <mat-option value="personal">Per persoon</mat-option>
           <mat-option value="byType">Per gerechttype</mat-option>

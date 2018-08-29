@@ -22,6 +22,7 @@ import {TableComponent} from './components/table/table.component';
 
 @NgModule({
   declarations: [
+    // All components
     AppComponent,
     NavigationComponent,
     OptionPanelComponent,
@@ -34,14 +35,18 @@ import {TableComponent} from './components/table/table.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    // Custom Material Design module --> material.module.ts
     MaterialModule,
     FormsModule,
+    // In memory web API
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryRestaurantService, {dataEncapsulation: false}
     ),
+    // Routing module
     AppRoutingModule,
   ],
+  // All services
   providers: [TableService, OrderService, DishesService, OptionsService],
   bootstrap: [AppComponent]
 })

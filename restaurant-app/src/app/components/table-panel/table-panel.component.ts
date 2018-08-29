@@ -32,6 +32,7 @@ export class TablePanelComponent implements OnInit {
     });
   }
 
+  // Load tables/orders from the corresponding services
   ngOnInit() {
     this.tableService.getTable(this.tableId).subscribe(data => {
       this.table = data;
@@ -87,10 +88,12 @@ export class TablePanelComponent implements OnInit {
     });
   }
 
+  // Filters the table according to the tableId
   tableFilter() {
     this.tableOrders = this.orders.filter(order => order.table === this.tableId);
   }
 
+  // Error handling
   onError(error) {
     console.log(error);
     this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});

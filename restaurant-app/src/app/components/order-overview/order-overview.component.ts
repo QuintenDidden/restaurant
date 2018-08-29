@@ -17,6 +17,7 @@ export class OrderOverviewComponent implements OnInit {
   constructor(private snackBar: MatSnackBar, private dishService: DishesService, private orderService: OrderService) {
   }
 
+  // Get orders of orderService and apply filters
   ngOnInit() {
     this.orderService.getOrders().subscribe(data => {
       this.tableStarters = data.filter(order => order.table === this.tableId).filter(order => order.type === 'Starter');

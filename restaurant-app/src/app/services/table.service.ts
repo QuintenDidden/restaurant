@@ -10,10 +10,12 @@ export class TableService {
 
   constructor(private http: HttpClient) { }
 
+  // Return all tables
   public getTables(): Observable<Table[]> {
     return this.http.get<Table[]>(this.tableUrl);
   }
 
+  // Return table by id
   public getTable(id): Observable<Table> {
     return this.http.get<Table>(this.tableUrl + '/' + id);
   }

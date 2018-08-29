@@ -24,34 +24,42 @@ export class OptionsService {
   constructor() {
   }
 
+  // Set borderOne
   changeBorderOne(border: number) {
     this.borderOne.next(border);
   }
 
+  // Set borderTwo
   changeBorderTwo(border: number) {
     this.borderTwo.next(border);
   }
 
+  // Set OrderDisplay
   changeOrderDisplay(order: string) {
     this.orderDisplay.next(order);
   }
 
+  // Set colorOne
   changeColorOne(color: string) {
     this.colorOne.next(color);
   }
 
+  // Set colorTwo
   changeColorTwo(color: string) {
     this.colorTwo.next(color);
   }
 
+  // Set global timer
   changeTimer(time: number) {
     this.timer.next(time);
   }
 
+  // Set if the timer has started
   changeTimerStarted(state: boolean) {
     this.timerStarted.next(state);
   }
 
+  // Start the global timer
   async startTimer() {
     if (this.timerStart === false) {
       this.timerStart = true;
@@ -65,6 +73,7 @@ export class OptionsService {
     }
   }
 
+  // Delay
   delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }

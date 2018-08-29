@@ -4,6 +4,7 @@ import {OverviewPanelComponent} from './components/overview-panel/overview-panel
 import {OptionPanelComponent} from './components/option-panel/option-panel.component';
 import {TablePanelComponent} from './components/table-panel/table-panel.component';
 
+// Routing paths
 const routes: Routes = [
   {path: '', redirectTo: '/overview', pathMatch: 'full'},
   {path: 'overview', component: OverviewPanelComponent},

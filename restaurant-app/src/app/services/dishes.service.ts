@@ -10,6 +10,7 @@ export class DishesService {
 
   constructor(private http: HttpClient) { }
 
+  // Return all dishes
   public getDishes(): Observable<Dish[]> {
     return this.http.get<Dish[]>(this.dishesUrl);
   }

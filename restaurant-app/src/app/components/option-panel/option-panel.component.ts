@@ -20,6 +20,7 @@ export class OptionPanelComponent implements OnInit {
               private snackBar: MatSnackBar) {
   }
 
+  // Get parameters from the optionsService
   ngOnInit() {
     this.options.currentOrderDisplay.subscribe(data => {
       this.orderdisplay = data;

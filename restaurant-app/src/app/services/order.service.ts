@@ -10,6 +10,7 @@ export class OrderService {
 
   constructor(private http: HttpClient) { }
 
+  // Return all orders
   public getOrders(): Observable<Order[]> {
     return this.http.get<Order[]>(this.orderUrl);
   }

@@ -24,6 +24,8 @@ export class PersonalOverviewComponent implements OnInit {
     , private orderService: OrderService, private tableService: TableService) {
   }
 
+  // Get table from tableService
+  // Get Orders of customers from the table
   ngOnInit() {
     this.tableService.getTable(this.tableId).subscribe(data => {
       this.table = data;

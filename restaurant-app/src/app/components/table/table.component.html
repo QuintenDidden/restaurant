@@ -1,0 +1,29 @@
+<!--Component displays 1 table-->
+<mat-card [style.background-color]="table.color" class="cardBox fontSerif"
+          [style.top]="table.posY" [style.left]="table.posX"
+          id="table{{ tableId }}">
+  <!--Title displays tableId-->
+  <mat-card-title class="cardTitle" (click)="viewTable(table.id)">
+    {{ table.id }}
+  </mat-card-title>
+  <!--Content displays personal timer for the table and # of customers seated-->
+  <mat-card-content class="fontSerif">
+    <div class="divFloatLeft">
+      <i class="material-icons md-18 vertical-align-middle padding-bottom-7">access_time</i>
+      <label class="labelText">{{ table.minutes }} min. </label>
+    </div>
+    <div class="divFloatRight">
+      <label class="labelText">{{ table.customers_total }} p.</label>
+      <i class="material-icons md-18 vertical-align-middle padding-bottom-7">accessibility</i>
+    </div>
+    <!--Buttons to indicate whether a course is ready or needs to be prepared-->
+    <div class="fontSerif">
+      <button mat-button id="starterBtn{{ tableId }}" class="cardButton posAbsLeft" (click)="starterPressed()">Starter
+      </button>
+      <button mat-button id="mainBtn{{ tableId }}" class="cardButton posAbsCenter" (click)="mainPressed()">Main</button>
+      <button mat-button id="dessertBtn{{ tableId }}" class="cardButton posAbsRight" (click)="dessertPressed()">
+        Dessert
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

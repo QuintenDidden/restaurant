@@ -22,4 +22,6 @@
   width: 35%;
   margin: auto;
 }
-
+.fontSerif{
+  font-family: Georgia, 'Times New Roman', serif;
+}

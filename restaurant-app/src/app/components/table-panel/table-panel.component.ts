@@ -23,6 +23,7 @@ export class TablePanelComponent implements OnInit {
   tableWarning;
   borderTwo;
   tableDanger;
+  orderDisplay;
 
   constructor(private router: Router, private route: ActivatedRoute, private tableService: TableService,
               private snackBar: MatSnackBar, private orderService: OrderService, private optionsService: OptionsService) {
@@ -35,39 +36,32 @@ export class TablePanelComponent implements OnInit {
     this.tableService.getTable(this.tableId).subscribe(data => {
       this.table = data;
     }, error => {
-      console.log('error in reading table');
-      console.log(error);
-      this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
+      this.onError(error);
     });
 
     this.orderService.getOrders().subscribe(data => {
       this.orders = data;
       this.tableFilter();
     }, error => {
-      console.log('error in reading orders');
-      console.log(error);
-      this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
+      this.onError(error);
     });
 
     this.optionsService.currentTimer.subscribe(data => {
         this.tableTimer = data;
       }, error => {
-        console.log(error);
-        this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
+      this.onError(error);
       }
     );
     this.optionsService.currentBorderOne.subscribe(data => {
         this.borderOne = data;
       }, error => {
-        console.log(error);
-        this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
+      this.onError(error);
       }
     );
     this.optionsService.currentBorderTwo.subscribe(data => {
         this.borderTwo = data;
       }, error => {
-        console.log(error);
-        this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
+      this.onError(error);
       }
     );
 
@@ -76,36 +70,29 @@ export class TablePanelComponent implements OnInit {
     this.optionsService.currentColorOne.subscribe(data => {
         this.tableWarning = data;
       }, error => {
-        console.log(error);
-        this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
+      this.onError(error);
       }
     );
     this.optionsService.currentColorTwo.subscribe(data => {
         this.tableDanger = data;
       }, error => {
-        console.log(error);
-        this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
+      this.onError(error);
       }
     );
+
+    this.optionsService.currentOrderDisplay.subscribe(data => {
+      this.orderDisplay = data;
+    }, error => {
+      this.onError(error);
+    });
   }
 
   tableFilter() {
     this.tableOrders = this.orders.filter(order => order.table === this.tableId);
   }
 
-  async tableColor() {
-    while (true) {
-      if (this.tableTimer > this.tableStart + this.borderOne) {
-        this.table.color = this.tableWarning;
-      }
-      if (this.tableTimer > this.tableStart + this.borderTwo) {
-        this.table.color = this.tableDanger;
-      }
-      await this.delay(1000);
-    }
-  }
-
-  delay(ms: number) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+  onError(error) {
+    console.log(error);
+    this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
   }
 }

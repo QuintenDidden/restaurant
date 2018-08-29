@@ -9,3 +9,7 @@
 .margin-bottom {
   margin-bottom: 10px;
 }
+
+.fontSerif{
+  font-family: Georgia, 'Times New Roman', serif;
+}

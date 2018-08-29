@@ -1,11 +1,11 @@
 <!--Tabs for the two different order view methods-->
-<mat-card>
+<mat-card *ngIf="orderDisplay === 'byType'" class="fontSerif">
   <mat-card-title>
     Table {{ tableId }}
   </mat-card-title>
   <mat-card-content>
-    <mat-tab-group class="demo-tab-group">
-      <mat-tab label="Order Overview">
+    <mat-tab-group class="demo-tab-group fontSerif">
+      <mat-tab label="Order Overview" class="fontSerif">
         <div class="demo-tab-content">
           <!--Order overview of the orders, ordered by dishtype-->
           <app-order-overview [tableId]="tableId"></app-order-overview>
@@ -15,6 +15,27 @@
         <div class="demo-tab-content">
           <!--Personal overview of the orders, ordered by name-->
           <app-personal-overview [tableId]="tableId"></app-personal-overview>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>
+<mat-card *ngIf="orderDisplay === 'personal'" class="fontSerif">
+  <mat-card-title>
+    Table {{ tableId }}
+  </mat-card-title>
+  <mat-card-content>
+    <mat-tab-group class="demo-tab-group fontSerif">
+      <mat-tab label="Personal Overview" class="fontSerif">
+        <div class="demo-tab-content">
+          <!--Personal overview of the orders, ordered by name-->
+          <app-personal-overview [tableId]="tableId"></app-personal-overview>
+        </div>
+      </mat-tab>
+      <mat-tab label="Order Overview">
+        <div class="demo-tab-content">
+          <!--Order overview of the orders, ordered by dishtype-->
+          <app-order-overview [tableId]="tableId"></app-order-overview>
         </div>
       </mat-tab>
     </mat-tab-group>

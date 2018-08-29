@@ -23,9 +23,13 @@ export class OrderOverviewComponent implements OnInit {
       this.tableMains = data.filter(order => order.table === this.tableId).filter(order => order.type === 'Main');
       this.tableDesserts = data.filter(order => order.table === this.tableId).filter(order => order.type === 'Dessert');
     }, error => {
-      console.log('error in reading table');
-      console.log(error);
-      this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
+      this.onError(error);
     });
+  }
+
+  // Error handling
+  private onError(error) {
+    console.log(error);
+    this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
   }
 }

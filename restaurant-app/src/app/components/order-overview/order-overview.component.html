@@ -1,39 +1,27 @@
-<!--<p> order-overview-comp: table id: {{ tableId }}</p>-->
-<!--<p *ngFor="let order of tableStarters">-->
-  <!--starter: {{ order.dishname }}, name: {{ order.last_name }}-->
-<!--</p>-->
-<!--<p *ngFor="let order of tableMains">-->
-  <!--main: {{ order.dishname }}, name: {{ order.last_name }}-->
-<!--</p>-->
-<!--<p *ngFor="let order of tableDesserts">-->
-  <!--dessert: {{ order.dishname }}, name: {{ order.last_name }}-->
-<!--</p>-->
-<!--<mat-card class="wrapperCard">-->
-  <mat-card class="subCard">
-    <mat-card-title>Starters</mat-card-title>
-    <mat-card-content>
-      <p *ngFor="let starter of tableStarters">
-        {{ starter.dishname }}
-        <sub><br/> - {{ starter.dish_desc }}</sub>
-      </p>
-    </mat-card-content>
-  </mat-card>
-  <mat-card class="subCard">
-    <mat-card-title>Mains</mat-card-title>
-    <mat-card-content>
-      <p *ngFor="let main of tableMains">
-        {{ main.dishname }}
-        <sub><br/> - {{ main.dish_desc }}</sub>
-      </p>
-    </mat-card-content>
-  </mat-card>
-  <mat-card class="subCard">
-    <mat-card-title>Desserts</mat-card-title>
-    <mat-card-content>
-      <p *ngFor="let dessert of tableDesserts">
-        {{ dessert.dishname }}
-        <sub><br/> - {{ dessert.dish_desc }}</sub>
-      </p>
-    </mat-card-content>
-  </mat-card>
-<!--</mat-card>-->
+<mat-card class="subCard fontSerif">
+  <mat-card-title>Starters</mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let starter of tableStarters">
+      {{ starter.dishname }}
+      <sub><br/> - {{ starter.dish_desc }}</sub>
+    </p>
+  </mat-card-content>
+</mat-card>
+<mat-card class="subCard fontSerif">
+  <mat-card-title>Mains</mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let main of tableMains">
+      {{ main.dishname }}
+      <sub><br/> - {{ main.dish_desc }}</sub>
+    </p>
+  </mat-card-content>
+</mat-card>
+<mat-card class="subCard fontSerif">
+  <mat-card-title>Desserts</mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let dessert of tableDesserts">
+      {{ dessert.dishname }}
+      <sub><br/> - {{ dessert.dish_desc }}</sub>
+    </p>
+  </mat-card-content>
+</mat-card>

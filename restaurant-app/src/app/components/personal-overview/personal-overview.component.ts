@@ -28,9 +28,7 @@ export class PersonalOverviewComponent implements OnInit {
     this.tableService.getTable(this.tableId).subscribe(data => {
       this.table = data;
     }, error => {
-      console.log('error in reading table');
-      console.log(error);
-      this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
+      this.onError(error);
     });
 
     this.orderService.getOrders().subscribe(data => {
@@ -53,11 +51,13 @@ export class PersonalOverviewComponent implements OnInit {
         this.customer4 = data.filter(order => order.customer_id === this.customers[9].customer_id);
       }
     }, error => {
-      console.log('error in reading table');
-      console.log(error);
-      this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
+      this.onError(error);
     });
+  }
 
-
+  // Error handling
+  private onError(error) {
+    console.log(error);
+    this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
   }
 }

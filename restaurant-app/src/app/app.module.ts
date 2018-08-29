@@ -18,6 +18,7 @@ import {TablePanelComponent} from './components/table-panel/table-panel.componen
 import {OptionsService} from './services/options.service';
 import {PersonalOverviewComponent} from './components/personal-overview/personal-overview.component';
 import {OrderOverviewComponent} from './components/order-overview/order-overview.component';
+import {TableComponent} from './components/table/table.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {OrderOverviewComponent} from './components/order-overview/order-overview
     OverviewPanelComponent,
     TablePanelComponent,
     PersonalOverviewComponent,
-    OrderOverviewComponent
+    OrderOverviewComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

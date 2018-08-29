@@ -14,10 +14,8 @@ export class OverviewPanelComponent implements OnInit {
   tableSet = [];
   private width;
   private height;
-  private timerStart: boolean;
-  private time: number;
-  constructor(
-              private tableService: TableService,
+
+  constructor(private tableService: TableService,
               private snackBar: MatSnackBar,
               private router: Router,
               private options: OptionsService) {
@@ -25,24 +23,21 @@ export class OverviewPanelComponent implements OnInit {
 
   ngOnInit(): void {
     this.tableService.getTables().subscribe(data => {
-      this.tableSet = data;
-      console.log(this.tableSet.toString());
-    },
+        this.tableSet = data;
+        console.log(this.tableSet.toString());
+      },
       error => {
-      console.log('error in reading');
-      console.log(error);
-      this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
+        this.onError(error);
       });
     this.width = window.innerWidth;
     this.height = window.innerHeight;
     console.log(this.width + ' x ' + this.height);
-     this.options.startTimer();
+    this.options.startTimer();
   }
 
-  viewTable(id) {
-    console.log('card ' + id + ' clicked');
-    this.router.navigate(['/table/', id]);
+  // Error handling
+  private onError(error) {
+    console.log(error);
+    this.snackBar.open('Error retrieving data from server', 'X', {duration: 10000});
   }
-
-
 }

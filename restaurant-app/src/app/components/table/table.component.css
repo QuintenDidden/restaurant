@@ -1,12 +1,31 @@
+.cardTitle {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.divFloatLeft {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.divFloatRight{
+  float: right;
+}
+
+.labelText {
+  font-size: 20px;
+}
+
 .wrapper {
   margin: auto;
   width: 80%;
 }
 
-.cardbox {
+.cardBox {
   width: 180px;
   float: left;
   margin: 5px 40px 25px 5px;
+  position: absolute;
 }
 
 .vertical-align-middle {
@@ -17,29 +36,39 @@
   padding-bottom: 7px;
 }
 
-.redOutline{
+.redOutline {
   border: solid red 2px;
+}
+
+.fontSerif {
+  font-family: Serif, Georgia, 'Times New Roman', serif;
 }
 
 .cardButton {
   text-align: center;
   font-size: small;
+  border-bottom: white solid 5px;
 }
 
-.posAbsLeft{
+.posAbsLeft {
   position: absolute;
   bottom: 0;
   left: 0;
+  min-width: 31%;
 }
-.posAbsCenter{
+
+.posAbsCenter {
   position: absolute;
   bottom: 0;
-  left: 70px;
+  left: 76px;
+  min-width: 31%;
 }
-.posAbsRight{
+
+.posAbsRight {
   position: absolute;
   bottom: 0;
   right: 0;
+  min-width: 31%;
 }
 .fontSerif{
   font-family: Georgia, 'Times New Roman', serif;
